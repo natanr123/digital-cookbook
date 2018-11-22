@@ -1,0 +1,87 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+carbonarra_spaghetti:
+  name: Spaghetti
+  recipe: carbonarra
+
+carbonarra_eggs:
+  name: Eggs
+  recipe: carbonarra
+
+carbonarra_bacon:
+  name: Bacon
+  recipe: carbonarra
+
+carbonarra_parsley:
+  name: Parsley
+  recipe: carbonarra
+
+carbonarra_parmesan:
+  name: Parmesan
+  recipe: carbonarra
+
+
+
+pierogi_flour:
+  name: Flour
+  recipe: pierogi
+
+pierogi_cream cheese:
+  name: Cream cheese
+  recipe: pierogi
+
+pierogi_potatoes:
+  name: Potatoes
+  recipe: pierogi
+
+pierogi_onion:
+  name: Onion
+  recipe: pierogi
+
+pierogi_butter:
+  name: Butter
+  recipe: pierogi
+
+
+
+sandwich_bread:
+  name: Bread
+  recipe: sandwich
+
+sandwich_butter:
+  name: Butter
+  recipe: sandwich
+
+sandwich_bacon:
+  name: Bacon
+  recipe: sandwich
+
+sandwich_cheese:
+  name: Cheese
+  recipe: sandwich
+
+sandwich_tomatoes:
+  name: Tomatoes
+  recipe: sandwich
+
+
+
+pizza_flour:
+  name: Flour
+  recipe: pizza
+
+pizza_cheese:
+  name: Cheese
+  recipe: pizza
+
+pizza_more cheese:
+  name: More cheese
+  recipe: pizza
+
+pizza_bacon:
+  name: Bacon
+  recipe: pizza
+
+pizza_tomatoes:
+  name: Tomatoes
+  recipe: pizza

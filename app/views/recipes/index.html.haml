@@ -1,0 +1,26 @@
+.div
+  = search_form_for @q, :builder => SimpleForm::FormBuilder, :url => '/' do |f|
+    = f.label :cuisine_eq
+    = f.search_field :cuisine_eq
+    = f.label :ingredients_name_eq
+    = f.search_field :ingredients_name_eq
+    = f.submit "Search"
+
+  = "No recipes found" if @recipes.empty?
+
+  %table.table{ :cellspacing => '0', :width => '100%' }
+    %thead
+      %tr
+        %td Name:
+    %tbody
+      - @recipes.each do |recipe|
+        %tr
+          %td
+            = recipe.name
+          %tr
+            %td
+            = recipe.ingredients.as_json
+          %td
+            = recipe.instructions
+          %td
+            = "#{recipe.cooking_time} min"

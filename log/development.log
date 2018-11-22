@@ -1,0 +1,1070 @@
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-22 12:17:02 +0200
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.10) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.10) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /home/natan/.rvm/rubies/ruby-2.1.7/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/natan/.rvm/rubies/ruby-2.1.7/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/natan/.rvm/rubies/ruby-2.1.7/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.8ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (9.5ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (10.7ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (19.8ms)
+  [1m[36m (13.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (17.4ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateRecipes (20160415164520)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "recipes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "cuisine" varchar, "name" varchar, "instructions" text, "cooking_time" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160415164520"]]
+  [1m[35m (13.3ms)[0m  commit transaction
+Migrating to CreateIngredients (20160415174455)
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  CREATE TABLE "ingredients" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "recipe_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_ingredients_on_recipe_id" ON "ingredients" ("recipe_id")[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160415174455"]]
+  [1m[36m (16.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ingredients_on_recipe_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ingredients_on_recipe_id' AND type='index'
+[0m
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-22 12:17:34 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (uninitialized constant FrontendController):
+  activesupport (4.2.10) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.10) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.10) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.10) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.10) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:70:in `controller_reference'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:60:in `controller'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:39:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.11) lib/rack/etag.rb:24:in `call'
+  rack (1.6.11) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.11) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.11) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.11) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.10) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /home/natan/.rvm/rubies/ruby-2.1.7/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/natan/.rvm/rubies/ruby-2.1.7/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/natan/.rvm/rubies/ruby-2.1.7/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.4ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.3ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.4ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (21.6ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (9.3ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (18.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-22 12:19:02 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#index as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template recipes/index, application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee]}. Searched in:
+  * "/home/natan/workruby/digital_cookbook/app/views"
+):
+  actionview (4.2.10) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.10) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.10) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.10) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.10) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.10) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.10) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.10) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.10) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.10) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.10) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.10) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.10) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.10) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.10) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/natan/.rvm/rubies/ruby-2.1.7/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.10) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.10) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.10) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.10) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.10) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.10) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.10) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.10) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.10) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.10) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.10) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.10) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.10) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.11) lib/rack/etag.rb:24:in `call'
+  rack (1.6.11) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.11) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.11) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.11) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.10) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /home/natan/.rvm/rubies/ruby-2.1.7/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/natan/.rvm/rubies/ruby-2.1.7/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/natan/.rvm/rubies/ruby-2.1.7/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.5ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (15.0ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (9.0ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (19.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-22 12:20:52 +0200
+Processing by RecipesController#index as HTML
+  Rendered recipes/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 221ms (Views: 220.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2018-11-22 12:20:52 +0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2018-11-22 12:20:52 +0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2018-11-22 12:20:52 +0200
+
+
+Started GET "/assets/application.self-377610cd7c1509e934744c810e3b4cf672dfbcacac3274e7d039827e2ae0fcc7.js?body=1" for 127.0.0.1 at 2018-11-22 12:20:52 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-22 12:21:43 +0200
+Processing by RecipesController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template recipes/index, application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee]}. Searched in:
+  * "/home/natan/workruby/digital_cookbook/app/views"
+):
+  actionview (4.2.10) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.10) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.10) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.10) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.10) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.10) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.10) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.10) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.10) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.10) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.10) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.10) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.10) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.10) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.10) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/natan/.rvm/rubies/ruby-2.1.7/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.10) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.10) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.10) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.10) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.10) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.10) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.10) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.10) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.10) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.10) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.10) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.10) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.10) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.11) lib/rack/etag.rb:24:in `call'
+  rack (1.6.11) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.11) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.11) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.11) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.10) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /home/natan/.rvm/rubies/ruby-2.1.7/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/natan/.rvm/rubies/ruby-2.1.7/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/natan/.rvm/rubies/ruby-2.1.7/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (10.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (7.8ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (14.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-22 12:22:48 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#index as HTML
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template recipes/index, application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :haml]}. Searched in:
+  * "/home/natan/workruby/digital_cookbook/app/views"
+):
+  actionview (4.2.10) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.10) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.10) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.10) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.10) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.10) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.10) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.10) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.10) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.10) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.10) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.10) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.10) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.10) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.10) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /home/natan/.rvm/rubies/ruby-2.1.7/lib/ruby/2.1.0/benchmark.rb:294:in `realtime'
+  activesupport (4.2.10) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.10) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.10) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.10) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.10) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.10) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.10) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.10) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.10) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.10) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.10) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.10) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.10) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:74:in `call'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.11) lib/rack/etag.rb:24:in `call'
+  rack (1.6.11) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.11) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.11) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.11) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.10) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  /home/natan/.rvm/rubies/ruby-2.1.7/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /home/natan/.rvm/rubies/ruby-2.1.7/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /home/natan/.rvm/rubies/ruby-2.1.7/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.6ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.8ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (14.6ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (9.7ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (19.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-22 12:23:48 +0200
+Processing by RecipesController#index as HTML
+  Rendered recipes/index.html.haml within layouts/application (6.9ms)
+Completed 200 OK in 141ms (Views: 140.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-22 12:30:01 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#index as HTML
+  Rendered recipes/index.html.haml within layouts/application (3.1ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/natan/workruby/digital_cookbook/app/views/recipes/index.html.haml:4: syntax error, unexpected ')'
+)).to_s);).to_s);; _hamlout.bu...
+ ^
+/home/natan/workruby/digital_cookbook/app/views/recipes/index.html.haml:4: syntax error, unexpected keyword_ensure, expecting keyword_end
+...:Util.html_safe(_erbout);ensure;@haml_buffer = @haml_buffer....
+...                               ^
+/home/natan/workruby/digital_cookbook/app/views/recipes/index.html.haml:5: syntax error, unexpected keyword_ensure, expecting ')'
+/home/natan/workruby/digital_cookbook/app/views/recipes/index.html.haml:7: syntax error, unexpected keyword_end, expecting ')'):
+  app/views/recipes/index.html.haml:4: syntax error, unexpected ')'
+  app/views/recipes/index.html.haml:4: syntax error, unexpected keyword_ensure, expecting keyword_end
+  app/views/recipes/index.html.haml:5: syntax error, unexpected keyword_ensure, expecting ')'
+  app/views/recipes/index.html.haml:7: syntax error, unexpected keyword_end, expecting ')'
+
+
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.8ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (20.6ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (17.9ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (26.0ms)
+
+
+Started POST "/__web_console/repl_sessions/056f55c4a77c57f18134fd30e9ae3e75/trace" for 127.0.0.1 at 2018-11-22 12:31:45 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-22 12:33:16 +0200
+Processing by RecipesController#index as HTML
+  Rendered recipes/index.html.haml within layouts/application (15.4ms)
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No Ransack::Search object was provided to search_form_for!):
+    1: .div
+    2:   asdasdasdsa
+    3:   = search_form_for @q, :builder => SimpleForm::FormBuilder do |f|
+    4:     = f.text_field :name
+  app/views/recipes/index.html.haml:3:in `_app_views_recipes_index_html_haml__136722759105659880_70121217682260'
+
+
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (10.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (22.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-22 12:33:34 +0200
+Processing by RecipesController#index as HTML
+  Rendered recipes/index.html.haml within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No Ransack::Search object was provided to search_form_for!):
+    1: .div
+    2:   asdasdasdsa
+    3:   = search_form_for @q, :builder => SimpleForm::FormBuilder do |f|
+    4:     = f.text_field :name
+  app/views/recipes/index.html.haml:3:in `_app_views_recipes_index_html_haml__136722759105659880_70121217682260'
+
+
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (31.3ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (41.6ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (7.3ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (15.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-22 12:34:06 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#index as HTML
+  Rendered recipes/index.html.haml within layouts/application (18.3ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No Ransack::Search object was provided to search_form_for!):
+    1: .div
+    2:   asdasdasdsa
+    3:   = search_form_for @q, :builder => SimpleForm::FormBuilder do |f|
+    4:     = f.text_field :name
+  app/views/recipes/index.html.haml:3:in `_app_views_recipes_index_html_haml__629563559807946217_70256310049480'
+
+
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.3ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (15.7ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (24.7ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-22 12:34:08 +0200
+Processing by RecipesController#index as HTML
+  Rendered recipes/index.html.haml within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No Ransack::Search object was provided to search_form_for!):
+    1: .div
+    2:   asdasdasdsa
+    3:   = search_form_for @q, :builder => SimpleForm::FormBuilder do |f|
+    4:     = f.text_field :name
+  app/views/recipes/index.html.haml:3:in `_app_views_recipes_index_html_haml__629563559807946217_70256310049480'
+
+
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.3ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (9.3ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (16.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-22 12:34:24 +0200
+Processing by RecipesController#index as HTML
+  Rendered recipes/index.html.haml within layouts/application (0.6ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (No Ransack::Search object was provided to search_form_for!):
+    1: .div
+    2:   asdasdasdsa
+    3:   = search_form_for @q, :builder => SimpleForm::FormBuilder do |f|
+    4:     = f.text_field :name
+  app/views/recipes/index.html.haml:3:in `_app_views_recipes_index_html_haml__629563559807946217_70256310049480'
+
+
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.0ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (7.6ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (14.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-22 12:34:34 +0200
+Processing by RecipesController#index as HTML
+  Rendered recipes/index.html.haml within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `recipes_path' for #<#<Class:0x0055ba8d2dd780>:0x0055ba8d2aa5b0>):
+    1: .div
+    2:   asdasdasdsa
+    3:   = search_form_for @q, :builder => SimpleForm::FormBuilder do |f|
+    4:     = f.text_field :name
+  app/views/recipes/index.html.haml:3:in `_app_views_recipes_index_html_haml__629563559807946217_70256310049480'
+
+
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.8ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (6.8ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (16.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-22 12:35:57 +0200
+Processing by RecipesController#index as HTML
+  Rendered recipes/index.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 153ms (Views: 152.0ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddCuisineToRecipe (20181122110145)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20181122110145"]]
+  [1m[35m (11.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_ingredients_on_recipe_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_ingredients_on_recipe_id' AND type='index'
+
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-22 13:08:06 +0200
+  [1m[35mActiveRecord::SchemaMigration Load (0.0ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by RecipesController#index as HTML
+  Rendered recipes/index.html.haml within layouts/application (1.9ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-22 13:12:09 +0200
+Processing by RecipesController#index as HTML
+  Rendered recipes/index.html.haml within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/home/natan/workruby/digital_cookbook/app/views/recipes/index.html.haml:8: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/recipes/index.html.haml:8: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (12.3ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (8.4ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (16.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-22 13:13:04 +0200
+Processing by RecipesController#index as HTML
+  Rendered recipes/index.html.haml within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `ingredient_contains' for Ransack::Search<class: Recipe, base: Grouping <combinator: and>>:Ransack::Search):
+    3:     Cuisine:
+    4:     = f.text_field :cuisine
+    5:     Ingredient:
+    6:     = f.text_field :ingredient_contains
+  app/views/recipes/index.html.haml:6:in `block in _app_views_recipes_index_html_haml__629563559807946217_70256331693980'
+  app/views/recipes/index.html.haml:2:in `_app_views_recipes_index_html_haml__629563559807946217_70256331693980'
+
+
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (10.6ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (6.6ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (14.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-22 13:13:41 +0200
+Processing by RecipesController#index as HTML
+  Rendered recipes/index.html.haml within layouts/application (4.0ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `ingredients_contains' for Ransack::Search<class: Recipe, base: Grouping <combinator: and>>:Ransack::Search):
+    3:     Cuisine:
+    4:     = f.text_field :cuisine
+    5:     Ingredient:
+    6:     = f.text_field :ingredients_contains
+  app/views/recipes/index.html.haml:6:in `block in _app_views_recipes_index_html_haml__629563559807946217_70256325424720'
+  app/views/recipes/index.html.haml:2:in `_app_views_recipes_index_html_haml__629563559807946217_70256325424720'
+
+
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.3ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (7.9ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (14.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-22 13:13:53 +0200
+Processing by RecipesController#index as HTML
+  Rendered recipes/index.html.haml within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `ingredients_contains' for Ransack::Search<class: Recipe, base: Grouping <combinator: and>>:Ransack::Search):
+    3:     Cuisine:
+    4:     = f.text_field :cuisine
+    5:     Ingredient:
+    6:     = f.text_field :ingredients_contains
+  app/views/recipes/index.html.haml:6:in `block in _app_views_recipes_index_html_haml__629563559807946217_70256325424720'
+  app/views/recipes/index.html.haml:2:in `_app_views_recipes_index_html_haml__629563559807946217_70256325424720'
+
+
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (11.4ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (8.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (15.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-22 13:14:44 +0200
+Processing by RecipesController#index as HTML
+  Rendered recipes/index.html.haml within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `ingredients_contains' for Ransack::Search<class: Recipe, base: Grouping <combinator: and>>:Ransack::Search):
+    3:     Cuisine:
+    4:     = f.text_field :cuisine
+    5:     Ingredient:
+    6:     = f.text_field :ingredients_contains
+  app/views/recipes/index.html.haml:6:in `block in _app_views_recipes_index_html_haml__629563559807946217_70256325424720'
+  app/views/recipes/index.html.haml:2:in `_app_views_recipes_index_html_haml__629563559807946217_70256325424720'
+
+
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (7.6ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (14.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-22 13:17:24 +0200
+Processing by RecipesController#index as HTML
+  Rendered recipes/index.html.haml within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `association' for Ransack::Search<class: Recipe, base: Grouping <combinator: and>>:Ransack::Search):
+    3:     Cuisine:
+    4:     = f.text_field :cuisine
+    5:     Ingredient:
+    6:     = f.text_field :association
+  app/views/recipes/index.html.haml:6:in `block in _app_views_recipes_index_html_haml__629563559807946217_70256321558540'
+  app/views/recipes/index.html.haml:2:in `_app_views_recipes_index_html_haml__629563559807946217_70256321558540'
+
+
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.0ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (9.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /home/natan/.rvm/gems/ruby-2.1.7/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (16.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-22 13:23:10 +0200
+Processing by RecipesController#index as HTML
+  Rendered recipes/index.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 13ms (Views: 10.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-22 13:26:16 +0200
+Processing by RecipesController#index as HTML
+  Rendered recipes/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-22 13:26:56 +0200
+Processing by RecipesController#index as HTML
+  Rendered recipes/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 9ms (Views: 8.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-22 13:26:57 +0200
+Processing by RecipesController#index as HTML
+  Rendered recipes/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-22 13:27:43 +0200
+Processing by RecipesController#index as HTML
+  Rendered recipes/index.html.haml within layouts/application (3.4ms)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-22 13:27:56 +0200
+Processing by RecipesController#index as HTML
+  Rendered recipes/index.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-11-22 13:34:17 +0200
+Processing by RecipesController#index as HTML
+  [1m[36mRecipe Load (0.0ms)[0m  [1mSELECT "recipes".* FROM "recipes"[0m
+  Rendered recipes/index.html.haml within layouts/application (5.9ms)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.1ms)[0m  DELETE FROM "recipes"
+  [1m[36mFixture Insert (0.1ms)[0m  [1mINSERT INTO "recipes" ("cuisine", "name", "instructions", "cooking_time", "created_at", "updated_at", "id") VALUES ('Italian', 'Spaghetti Carbonarra', 'Cook spaghetti in the pot.  Make sauce.', 30, '2018-11-22 11:35:21', '2018-11-22 11:35:21', 216898435)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "recipes" ("cuisine", "name", "instructions", "cooking_time", "created_at", "updated_at", "id") VALUES ('Polish', 'Pierogi', 'Make stuffing from cheese, potatoes and onion.  Make the dough and cut it into circles.  Combine dough circles and stuffing into pierogis.  Boil.', 120, '2018-11-22 11:35:21', '2018-11-22 11:35:21', 323119470)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "recipes" ("cuisine", "name", "instructions", "cooking_time", "created_at", "updated_at", "id") VALUES (NULL, 'Sandwich', 'Put it all together', 2, '2018-11-22 11:35:21', '2018-11-22 11:35:21', 136775786)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "recipes" ("cuisine", "name", "instructions", "cooking_time", "created_at", "updated_at", "id") VALUES ('Italian', 'Pizza', 'Make dough, add things, put into oven.', 120, '2018-11-22 11:35:21', '2018-11-22 11:35:21', 266175090)
+  [1m[36mFixture Delete (0.0ms)[0m  [1mDELETE FROM "ingredients"[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "ingredients" ("name", "created_at", "updated_at", "id", "recipe_id") VALUES ('Spaghetti', '2018-11-22 11:35:21', '2018-11-22 11:35:21', 250222558, 216898435)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "ingredients" ("name", "created_at", "updated_at", "id", "recipe_id") VALUES ('Eggs', '2018-11-22 11:35:21', '2018-11-22 11:35:21', 35679962, 216898435)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "ingredients" ("name", "created_at", "updated_at", "id", "recipe_id") VALUES ('Bacon', '2018-11-22 11:35:21', '2018-11-22 11:35:21', 112701209, 216898435)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "ingredients" ("name", "created_at", "updated_at", "id", "recipe_id") VALUES ('Parsley', '2018-11-22 11:35:21', '2018-11-22 11:35:21', 132839235, 216898435)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "ingredients" ("name", "created_at", "updated_at", "id", "recipe_id") VALUES ('Parmesan', '2018-11-22 11:35:21', '2018-11-22 11:35:21', 20715986, 216898435)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "ingredients" ("name", "created_at", "updated_at", "id", "recipe_id") VALUES ('Flour', '2018-11-22 11:35:21', '2018-11-22 11:35:21', 554470509, 323119470)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "ingredients" ("name", "created_at", "updated_at", "id", "recipe_id") VALUES ('Cream cheese', '2018-11-22 11:35:21', '2018-11-22 11:35:21', 965702068, 323119470)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "ingredients" ("name", "created_at", "updated_at", "id", "recipe_id") VALUES ('Potatoes', '2018-11-22 11:35:21', '2018-11-22 11:35:21', 627633043, 323119470)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "ingredients" ("name", "created_at", "updated_at", "id", "recipe_id") VALUES ('Onion', '2018-11-22 11:35:21', '2018-11-22 11:35:21', 649395385, 323119470)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "ingredients" ("name", "created_at", "updated_at", "id", "recipe_id") VALUES ('Butter', '2018-11-22 11:35:21', '2018-11-22 11:35:21', 66109982, 323119470)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "ingredients" ("name", "created_at", "updated_at", "id", "recipe_id") VALUES ('Bread', '2018-11-22 11:35:21', '2018-11-22 11:35:21', 284146334, 136775786)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "ingredients" ("name", "created_at", "updated_at", "id", "recipe_id") VALUES ('Butter', '2018-11-22 11:35:21', '2018-11-22 11:35:21', 584913492, 136775786)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "ingredients" ("name", "created_at", "updated_at", "id", "recipe_id") VALUES ('Bacon', '2018-11-22 11:35:21', '2018-11-22 11:35:21', 681114317, 136775786)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "ingredients" ("name", "created_at", "updated_at", "id", "recipe_id") VALUES ('Cheese', '2018-11-22 11:35:21', '2018-11-22 11:35:21', 469457775, 136775786)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "ingredients" ("name", "created_at", "updated_at", "id", "recipe_id") VALUES ('Tomatoes', '2018-11-22 11:35:21', '2018-11-22 11:35:21', 885642764, 136775786)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "ingredients" ("name", "created_at", "updated_at", "id", "recipe_id") VALUES ('Flour', '2018-11-22 11:35:21', '2018-11-22 11:35:21', 941174320, 266175090)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "ingredients" ("name", "created_at", "updated_at", "id", "recipe_id") VALUES ('Cheese', '2018-11-22 11:35:21', '2018-11-22 11:35:21', 623933992, 266175090)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "ingredients" ("name", "created_at", "updated_at", "id", "recipe_id") VALUES ('More cheese', '2018-11-22 11:35:21', '2018-11-22 11:35:21', 597933290, 266175090)[0m
+  [1m[35mFixture Insert (0.0ms)[0m  INSERT INTO "ingredients" ("name", "created_at", "updated_at", "id", "recipe_id") VALUES ('Bacon', '2018-11-22 11:35:21', '2018-11-22 11:35:21', 314904513, 266175090)
+  [1m[36mFixture Insert (0.0ms)[0m  [1mINSERT INTO "ingredients" ("name", "created_at", "updated_at", "id", "recipe_id") VALUES ('Tomatoes', '2018-11-22 11:35:21', '2018-11-22 11:35:21', 32149, 266175090)[0m
+  [1m[35m (11.9ms)[0m  commit transaction
+
+
+Started GET "/?utf8=%E2%9C%93&q%5Bcuisine%5D=fgfg&q%5Bingredients_name_cont%5D=xcvxcv&commit=Search" for 127.0.0.1 at 2018-11-22 13:37:07 +0200
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"cuisine"=>"fgfg", "ingredients_name_cont"=>"xcvxcv"}, "commit"=>"Search"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes" LEFT OUTER JOIN "ingredients" ON "ingredients"."recipe_id" = "recipes"."id" WHERE ("ingredients"."name" LIKE '%xcvxcv%')
+  Rendered recipes/index.html.haml within layouts/application (2.5ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/?utf8=%E2%9C%93&q%5Bcuisine%5D=fgfg&q%5Bingredients_name_cont%5D=xcvxcv&commit=Search" for 127.0.0.1 at 2018-11-22 13:42:16 +0200
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"cuisine"=>"fgfg", "ingredients_name_cont"=>"xcvxcv"}, "commit"=>"Search"}
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(DISTINCT "recipes"."id") FROM "recipes" LEFT OUTER JOIN "ingredients" ON "ingredients"."recipe_id" = "recipes"."id" WHERE ("ingredients"."name" LIKE '%xcvxcv%')[0m
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" LEFT OUTER JOIN "ingredients" ON "ingredients"."recipe_id" = "recipes"."id" WHERE ("ingredients"."name" LIKE '%xcvxcv%')
+  Rendered recipes/index.html.haml within layouts/application (17.5ms)
+Completed 200 OK in 31ms (Views: 24.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/?utf8=%E2%9C%93&q%5Bcuisine%5D=sdfsd&q%5Bingredients_name_eq%5D=sdfsdf&commit=Search" for 127.0.0.1 at 2018-11-22 13:48:31 +0200
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"cuisine"=>"sdfsd", "ingredients_name_eq"=>"sdfsdf"}, "commit"=>"Search"}
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(DISTINCT "recipes"."id") FROM "recipes" LEFT OUTER JOIN "ingredients" ON "ingredients"."recipe_id" = "recipes"."id" WHERE "ingredients"."name" = 'sdfsdf'[0m
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" LEFT OUTER JOIN "ingredients" ON "ingredients"."recipe_id" = "recipes"."id" WHERE "ingredients"."name" = 'sdfsdf'
+  Rendered recipes/index.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 17ms (Views: 8.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/?utf8=%E2%9C%93&q%5Bcuisine%5D=vvvvv&q%5Bingredients_name_eq%5D=sdfsdf&commit=Search" for 127.0.0.1 at 2018-11-22 13:51:05 +0200
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"cuisine"=>"vvvvv", "ingredients_name_eq"=>"sdfsdf"}, "commit"=>"Search"}
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(DISTINCT "recipes"."id") FROM "recipes" LEFT OUTER JOIN "ingredients" ON "ingredients"."recipe_id" = "recipes"."id" WHERE "ingredients"."name" = 'sdfsdf'[0m
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" LEFT OUTER JOIN "ingredients" ON "ingredients"."recipe_id" = "recipes"."id" WHERE "ingredients"."name" = 'sdfsdf'
+  Rendered recipes/index.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/?utf8=%E2%9C%93&q%5Bcuisine%5D=&q%5Bingredients_name_eq%5D=sdfsdf&commit=Search" for 127.0.0.1 at 2018-11-22 13:51:30 +0200
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"cuisine"=>"", "ingredients_name_eq"=>"sdfsdf"}, "commit"=>"Search"}
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(DISTINCT "recipes"."id") FROM "recipes" LEFT OUTER JOIN "ingredients" ON "ingredients"."recipe_id" = "recipes"."id" WHERE "ingredients"."name" = 'sdfsdf'[0m
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" LEFT OUTER JOIN "ingredients" ON "ingredients"."recipe_id" = "recipes"."id" WHERE "ingredients"."name" = 'sdfsdf'
+  Rendered recipes/index.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/?utf8=%E2%9C%93&q%5Bcuisine_eq%5D=asdasd&q%5Bingredients_name_eq%5D=sdfsdf&commit=Search" for 127.0.0.1 at 2018-11-22 13:51:42 +0200
+Processing by RecipesController#index as HTML
+  Parameters: {"utf8"=>"✓", "q"=>{"cuisine_eq"=>"asdasd", "ingredients_name_eq"=>"sdfsdf"}, "commit"=>"Search"}
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(DISTINCT "recipes"."id") FROM "recipes" LEFT OUTER JOIN "ingredients" ON "ingredients"."recipe_id" = "recipes"."id" WHERE ("recipes"."cuisine" = 'asdasd' AND "ingredients"."name" = 'sdfsdf')[0m
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT "recipes".* FROM "recipes" LEFT OUTER JOIN "ingredients" ON "ingredients"."recipe_id" = "recipes"."id" WHERE ("recipes"."cuisine" = 'asdasd' AND "ingredients"."name" = 'sdfsdf')
+  Rendered recipes/index.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.4ms)

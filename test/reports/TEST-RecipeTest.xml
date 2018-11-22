@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="RecipeTest" tests="8" time="0.167516223" failures="0" errors="0" skipped="0" assertions="18" timestamp="2018-11-22T13:57:19+02:00">
+  <testcase name="test_negative_cooking_time_is_incorrect" time="0.002909446999183274" assertions="2">
+  </testcase>
+  <testcase name="test_zero_cooking_time_is_incorrect" time="0.0008214959998440463" assertions="2">
+  </testcase>
+  <testcase name="test_name_must_not_be_longer_than_100_characters" time="0.0015357600004790584" assertions="2">
+  </testcase>
+  <testcase name="test_instructions_must_be_present" time="0.0008628690011391882" assertions="2">
+  </testcase>
+  <testcase name="test_cooking_time_must_be_present" time="0.0008793140004854649" assertions="2">
+  </testcase>
+  <testcase name="test_attributes" time="0.0001728409988572821" assertions="4">
+  </testcase>
+  <testcase name="test_instructions_must_not_be_longer_than_1000_characters" time="0.0012734080009977333" assertions="2">
+  </testcase>
+  <testcase name="test_name_must_be_present" time="0.0009764659989741631" assertions="2">
+  </testcase>
+</testsuite>

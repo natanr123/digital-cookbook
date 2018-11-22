@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+carbonarra:
+  cuisine: Italian
+  name: Spaghetti Carbonarra
+  instructions: Cook spaghetti in the pot.  Make sauce.
+  cooking_time: 30
+
+pierogi:
+  cuisine: Polish
+  name: Pierogi
+  instructions: Make stuffing from cheese, potatoes and onion.  Make the dough and cut it into circles.  Combine dough circles and stuffing into pierogis.  Boil.
+  cooking_time: 120
+
+sandwich:
+  cuisine:
+  name: Sandwich
+  instructions: Put it all together
+  cooking_time: 2
+
+pizza:
+  cuisine: Italian
+  name: Pizza
+  instructions: Make dough, add things, put into oven.
+  cooking_time: 120
